@@ -1,4 +1,5 @@
 <h1>
   {{title}}
 </h1>
+<div>Chart type: <chart-selector (select)="selectType($event)"></chart-selector></div>
 <nvd3 [options]="options" [data]="data"></nvd3>

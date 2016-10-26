@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AllOptions, AllData} from "./defs";
 declare let d3: any;
 
 @Component({
@@ -11,7 +12,9 @@ export class AppComponent {
 
   options;
   data;
+  chartType;
   ngOnInit(){
+
     this.options = {
       chart: {
         type: 'discreteBarChart',
@@ -77,5 +80,11 @@ export class AppComponent {
         ]
       }
     ];
+  }
+
+  selectType(e){
+    this.chartType = e;
+    this.options = AllOptions[this.chartType];
+    this.data = AllData[this.chartType];
   }
 }

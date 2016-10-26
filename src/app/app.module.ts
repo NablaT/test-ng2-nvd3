@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {nvD3Module} from "./shared/ng2-nvd3/ng2-nvd3.module";
+import {ChartSelectorComponent} from "./chart-selector";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChartSelectorComponent
   ],
   imports: [
     BrowserModule,
